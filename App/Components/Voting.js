@@ -5,9 +5,12 @@ import {
     TextInput,
     View,
     ScrollView,
-    AsyncStorage
+    AsyncStorage,
+    TouchableWithoutFeedback
 } from 'react-native';
 import Database from '../firebase/database';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+import dismissKeyboard from 'react-native-dismiss-keyboard';
 import { CheckBox, Divider, Button } from 'react-native-elements';
 
 export default class Voting extends Component {
@@ -93,31 +96,38 @@ export default class Voting extends Component {
         }
         return (
             <View style={{ backgroundColor: '#424242', height: '100%' }}>
-                <View style={{ justifyContent: 'center', alignItems: 'center' }}>
-                    <Text style={styles.title}>Enter Name</Text>
-                    <TextInput
-                        style={{ borderRadius: 5, marginTop: 10, fontSize: 20, height: 40, width: '90%', backgroundColor: 'white', }}
-                        placeholder="Your Name"
-                        maxLength={15}
-                        onChangeText={(name) => { this.setState({ name }), this.validator() }}
-                    />
-                </View>
-                <View style={styles.height}>
-                    <Text style={styles.title}>Select Food Item</Text>
-                    <ScrollView>
-                        {this.state.choices && itemsToVote}
-                    </ScrollView>
-                    <Divider style={{ backgroundColor: "black", height: 2 }} />
-                </View>
-                <View style={{ justifyContent: 'center', alignItems: 'center' }}>
-                    <Text style={styles.title}>Enter Preferences</Text>
-                    <TextInput
-                        multiline
-                        style={{ borderRadius: 10, marginTop: 10, fontSize: 20, height: 70, width: '90%', backgroundColor: 'white', }}
-                        placeholder="Enter Preference"
-                        onChangeText={(text) => this.insertPreference(text)}
-                    />
-                </View>
+                <KeyboardAwareScrollView>
+                    <TouchableWithoutFeedback onPress={dismissKeyboard}>
+                        <View>
+
+                            <View style={{ justifyContent: 'center', alignItems: 'center' }}>
+                                <Text style={styles.title}>Enter Name</Text>
+                                <TextInput
+                                    style={{ borderRadius: 5, marginTop: 10, fontSize: 20, height: 40, width: '90%', backgroundColor: 'white', }}
+                                    placeholder="Your Name"
+                                    maxLength={15}
+                                    onChangeText={(name) => { this.setState({ name }), this.validator() }}
+                                />
+                            </View>
+                            <View style={styles.height}>
+                                <Text style={styles.title}>Select Food Item</Text>
+                                <ScrollView>
+                                    {this.state.choices && itemsToVote}
+                                </ScrollView>
+                                <Divider style={{ backgroundColor: "black", height: 2 }} />
+                            </View>
+                            <View style={{ justifyContent: 'center', alignItems: 'center' }}>
+                                <Text style={styles.title}>Enter Preferences</Text>
+                                <TextInput
+                                    multiline
+                                    style={{ borderRadius: 10, marginTop: 10, fontSize: 20, height: 70, width: '90%', backgroundColor: 'white', }}
+                                    placeholder="Enter Preference"
+                                    onChangeText={(text) => this.insertPreference(text)}
+                                />
+                            </View>
+                        </View>
+                    </TouchableWithoutFeedback>
+                </KeyboardAwareScrollView>
                 <View style={styles.BottomButton}>
                     <Button
                         large
@@ -129,6 +139,8 @@ export default class Voting extends Component {
                         disabled={this.state.disableButton}
                     />
                 </View>
+
+
             </View>
         )
     }
