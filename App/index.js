@@ -19,7 +19,7 @@ import Response from './Components/Response';
 
 export default class App extends Component {
     static navigationOptions = {
-        title: 'Home',
+        header: null
     };
     componentWillMount() {
         console.log(this.state);
