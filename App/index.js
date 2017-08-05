@@ -52,7 +52,7 @@ export default class App extends Component {
                 <Text style={styles.title}>Food Poll</Text>
                 <Button
                     large
-                    style={{ marginTop: 20, margin: 10 }}
+                    buttonStyle={{ marginTop: 20, margin: 10 }}
                     backgroundColor='#f05545'
                     title='Create Poll'
                     onPress={() => this.props.navigation.navigate('CreatePoll')}
@@ -68,7 +68,7 @@ export default class App extends Component {
                     color='black'
                     iconRight
                     fontWeight='bold'
-                    style={{ margin: 10 }}
+                    buttonStyle={{ margin: 10 }}
                     onPress={() => this.props.navigation.navigate('EnterLink')}
                 />
 
@@ -80,7 +80,7 @@ export default class App extends Component {
                     color='black'
                     iconRight
                     fontWeight='bold'
-                    style={{ margin: 10 }}
+                    buttonStyle={{ margin: 10 }}
                 />
             </View>
         );
