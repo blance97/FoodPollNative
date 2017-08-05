@@ -1,5 +1,5 @@
 # FoodPollNative
-React-Native App for food Poll. Built with React-Native and Firebase
+React-Native App for food Poll. Built with React-Native and Firebase.  This works both on IOS and Android but is better suited for IOS.
  
 ## Purpose
  To allow for a person in large groups to efficiently send a poll/survey out to everyone select their food preferences. This is an addon to the [Food Poll Web App](foodpoll.herokuapp.com)
@@ -19,3 +19,11 @@ React-Native App for food Poll. Built with React-Native and Firebase
 <img src="https://github.com/blance97/FoodPollNative/blob/master/ExamplePhotos/Vote.png" width="400" height="600" />
 <img src="https://github.com/blance97/FoodPollNative/blob/master/ExamplePhotos/Results.png" width="400" height="600" />
 </div>
+
+## To Run
+* download or gitclone the repo.
+* npm install
+* **If you have react native**
+* react-native run-ios OR react-native run-android
+* **Otherwise you can download the use the ios or android folders**
+
