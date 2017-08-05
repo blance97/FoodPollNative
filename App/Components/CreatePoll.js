@@ -70,7 +70,7 @@ export default class CreatePoll extends Component {
                         backgroundColor={'rgba(0,0,0,.5)'}
                         borderRadius={5}
                         onPress={() => this.props.navigation.navigate('FoodOptions', { cuisines: Object.keys(Cuisines), select: (data) => this.updateOption(data, i) })}
-                        style={{ marginBottom: 10 }}
+                        buttonStyle={{ marginBottom: 10 }}
                     />
                 </View>
             )
