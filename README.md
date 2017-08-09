@@ -2,7 +2,7 @@
 React-Native App for food Poll. Built with React-Native and Firebase.  This works both on IOS and Android but is better suited for IOS.
  
 ## Purpose
- To allow for a person in large groups to efficiently send a poll/survey out to everyone select their food preferences. This is an addon to the [Food Poll Web App](www.foodpoll.herokuapp.com)
+ To allow for a person in large groups to efficiently send a poll/survey out to everyone select their food preferences. This is an addon to the [Food Poll Web App](https://www.foodpoll.herokuapp.com)
 ## Flow
   1. User creates a poll
   2. User shares poll link with other users.
