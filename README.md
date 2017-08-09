@@ -18,6 +18,8 @@ React-Native App for food Poll. Built with React-Native and Firebase.  This work
 <img src="https://github.com/blance97/FoodPollNative/blob/master/ExamplePhotos/CreatePoll.png" width="400" height="600" />
 <img src="https://github.com/blance97/FoodPollNative/blob/master/ExamplePhotos/Vote.png" width="400" height="600" />
 <img src="https://github.com/blance97/FoodPollNative/blob/master/ExamplePhotos/Results.png" width="400" height="600" />
+<img src="https://github.com/blance97/FoodPollNative/blob/master/ExamplePhotos/SuggestedPlaces.png" width="400" height="600" />
+<img src="https://github.com/blance97/FoodPollNative/blob/master/ExamplePhotos/Details.png" width="400" height="600" />
 </div>
 
 ## Run

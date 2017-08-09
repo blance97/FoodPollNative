@@ -27,7 +27,7 @@ export default class SuggestedPlaces extends Component {
         navigator.geolocation.getCurrentPosition(
             (position) => {
                 this.props.navigation.state.params.keywords.forEach((element) => {
-                    fetch(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?opennow&location=${position.coords.latitude},${position.coords.longitude}&radius=24140.2&type=restaurant&keyword=${element}{&key=AIzaSyCpOKNd2Ik3OgRAryOqTXvK8dpi9m76PdE`)
+                    fetch(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?opennow&location=${position.coords.latitude},${position.coords.longitude}&radius=24141&type=restaurant&keyword=${element}&key=AIzaSyCpOKNd2Ik3OgRAryOqTXvK8dpi9m76PdE`)
                         .then((res) => res.json())
                         .then((resJSON) => this.setState({ initPos: { lat: position.coords.latitude, long: position.coords.longitude }, SuggestedPlaces: { ...this.state.SuggestedPlaces, [element]: resJSON.results.slice(0, 3) } }));
                 })
