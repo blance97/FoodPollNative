@@ -8,8 +8,8 @@ React-Native App for food Poll. Built with React-Native and Firebase.  This work
   2. User shares poll link with other users.
   3. Everyone enters link and selects their preference.
   4. User view results.
+  5. View suggested restaurants using Google Places Search API. Currently limited to 3 responses per option.
 ## TODO:
- * Use keywords from preferences to suggest places. (Google Places API)
  * Integrate with something like Uber Eats?
  
 ### Screen Shots
