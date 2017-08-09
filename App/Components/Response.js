@@ -69,6 +69,23 @@ export default class Response extends Component {
             <View style={{ backgroundColor: '#424242', height: '100%' }}>
                 <ScrollView>
                     {votes}
+                    <Button
+                        buttonStyle={{ marginTop: 20 }}
+                        large
+                        title="Suggested Places"
+                        fontSize={20}
+                        onPress={() => {
+                            this.props.navigation.navigate('SuggestedPlaces', {
+                                keywords: this.state.foodVotes.map((element) => {
+                                    return element.data
+                                })
+                            })
+                        }}
+                        iconRight
+                        icon={{ name: 'cutlery', type: 'font-awesome' }}
+                        backgroundColor={'#757575'}
+                        borderRadius={5}
+                    />
                     <View style={{ justifyContent: 'center', marginTop: 10 }}>
                         <Table>
                             <Row data={tableHead} style={styles.head} textStyle={styles.text} />

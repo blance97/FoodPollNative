@@ -59,6 +59,7 @@ export default class CreatePoll extends Component {
     }
 
     render() {
+        
         const buttons = this.state.inputs.map((element, i) => {
             return (
                 <View key={i}>
@@ -69,7 +70,7 @@ export default class CreatePoll extends Component {
                         fontSize={20}
                         backgroundColor={'rgba(0,0,0,.5)'}
                         borderRadius={5}
-                        onPress={() => this.props.navigation.navigate('FoodOptions', { cuisines: Object.keys(Cuisines), select: (data) => this.updateOption(data, i) })}
+                        onPress={() => this.props.navigation.navigate('FoodOptions', { cuisines: Cuisines.Cuisines , select: (data) => this.updateOption(data, i) })}
                         buttonStyle={{ marginBottom: 10 }}
                     />
                 </View>

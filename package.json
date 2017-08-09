@@ -10,6 +10,7 @@
 		"firebase": "^4.2.0",
 		"react": "16.0.0-alpha.12",
 		"react-native": "0.47.1",
+		"react-native-accordion": "^1.0.1",
 		"react-native-dismiss-keyboard": "^1.0.0",
 		"react-native-elements": "^0.15.0",
 		"react-native-keyboard-aware-scroll-view": "^0.2.9",

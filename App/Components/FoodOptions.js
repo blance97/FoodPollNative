@@ -15,7 +15,6 @@ export default class FoodOptions extends Component {
     };
     constructor(props) {
         super(props);
-        // console.log()
         this.ds = new ListView.DataSource({ rowHasChanged: (row1, row2) => row1 !== row2 })
         this.state = {
             cuisines: this.props.navigation.state.params.cuisines
@@ -48,7 +47,7 @@ export default class FoodOptions extends Component {
 
     render() {
         return (
-            <View style={{ backgroundColor: '#424242' }}>
+            <View style={{ backgroundColor: '#424242', flex: 1 }}>
                 <SearchBar
                     onChangeText={(text) => this.filter(text)}
                     placeholder='Filter...' />

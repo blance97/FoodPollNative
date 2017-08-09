@@ -16,6 +16,8 @@ import FoodOptions from './Components/FoodOptions';
 import SharePoll from './Components/SharePoll';
 import Voting from './Components/Voting';
 import Response from './Components/Response';
+import SuggestedPlaces from './Components/SuggestedPlaces';
+import DetailedPlace from './Components/DetailedPlace';
 
 export default class App extends Component {
     static navigationOptions = {
@@ -95,6 +97,8 @@ const Router = StackNavigator({
     SharePoll: { screen: SharePoll },
     Vote: { screen: Voting },
     Response: { screen: Response },
+    SuggestedPlaces: { screen: SuggestedPlaces },
+    DetailedPlace: { screen: DetailedPlace }
 });
 
 const styles = StyleSheet.create({
