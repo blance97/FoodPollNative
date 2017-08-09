@@ -54,7 +54,7 @@ export default class App extends Component {
                 <Text style={styles.title}>Food Poll</Text>
                 <Button
                     large
-                    buttonStyle={{ marginTop: 20, margin: 10 }}
+                    buttonStyle={{ marginTop: 75, margin: 10 }}
                     backgroundColor='#f05545'
                     title='Create Poll'
                     onPress={() => this.props.navigation.navigate('CreatePoll')}
