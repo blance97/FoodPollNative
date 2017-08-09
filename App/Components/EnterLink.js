@@ -5,9 +5,11 @@ import {
     TextInput,
     View,
     Clipboard,
-    AsyncStorage
+    AsyncStorage,
+    TouchableWithoutFeedback
 } from 'react-native';
 import Database from '../firebase/database';
+import dismissKeyboard from 'react-native-dismiss-keyboard';
 import { Button } from 'react-native-elements';
 
 export default class EnterLink extends Component {
@@ -48,14 +50,16 @@ export default class EnterLink extends Component {
             <View style={{
                 backgroundColor: '#424242', height: '100%'
             }}>
-                <View style={styles.EnterLink}>
-                    <Text style={styles.title}>Enter Link</Text>
-                    <TextInput
-                        style={{ marginTop: 10, fontSize: 20, height: 50, width: '90%', backgroundColor: 'white', }}
-                        placeholder="Enter Poll Link..."
-                        onChangeText={(text) => this.setState({ link: text })}
-                    />
-                </View>
+                <TouchableWithoutFeedback onPress={dismissKeyboard}>
+                    <View style={styles.EnterLink}>
+                        <Text style={styles.title}>Enter Link</Text>
+                        <TextInput
+                            style={{ marginTop: 10, fontSize: 20, height: 50, width: '90%', backgroundColor: 'white', }}
+                            placeholder="Enter Poll Link..."
+                            onChangeText={(text) => this.setState({ link: text })}
+                        />
+                    </View>
+                </TouchableWithoutFeedback >
                 <View style={styles.BottomButton}>
                     <Button
                         large

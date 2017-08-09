@@ -6,7 +6,8 @@ import {
     View,
     ScrollView,
     AsyncStorage,
-    TouchableWithoutFeedback
+    TouchableWithoutFeedback,
+    Platform
 } from 'react-native';
 import Database from '../firebase/database';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
@@ -99,7 +100,6 @@ export default class Voting extends Component {
                 <KeyboardAwareScrollView>
                     <TouchableWithoutFeedback onPress={dismissKeyboard}>
                         <View>
-
                             <View style={{ justifyContent: 'center', alignItems: 'center' }}>
                                 <Text style={styles.title}>Enter Name</Text>
                                 <TextInput
@@ -128,6 +128,7 @@ export default class Voting extends Component {
                         </View>
                     </TouchableWithoutFeedback>
                 </KeyboardAwareScrollView>
+
                 <View style={styles.BottomButton}>
                     <Button
                         large
@@ -139,8 +140,6 @@ export default class Voting extends Component {
                         disabled={this.state.disableButton}
                     />
                 </View>
-
-
             </View>
         )
     }

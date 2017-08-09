@@ -4,7 +4,8 @@ import {
     Text,
     View,
     ScrollView,
-    ActivityIndicator
+    ActivityIndicator,
+    Platform
 } from 'react-native';
 import { List, ListItem } from 'react-native-elements'
 
@@ -32,7 +33,7 @@ export default class SuggestedPlaces extends Component {
                 })
             });
         (error) => alert(error.message),
-            { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 }
+            { enableHighAccuracy: Platform.OS === 'ios' ? true : false, timeout: 20000, maximumAge: 1000 }
     }
 
     renderPrice(price_level) {
